@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>เพิ่มข้อมูล</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form novalidate #myForm="ngForm" (ngSubmit)="insert(myForm.value)">
+    <ion-input type="text" ngModel name="his_id" placeholder="Enter Input">   รหัส : </ion-input>
+    <ion-input  type="text" ngModel name="name" placeholder="Enter Input">    ชื่อ  :</ion-input>
+    <ion-input  type="text" ngModel name="age" placeholder="Enter Input">     อายุ :</ion-input>
+    <ion-input  type="text" ngModel name="gender" placeholder="Enter Input">  เพศ :</ion-input>
+ 
+
+  <ion-button type="submit" expand="full">save</ion-button>
+  </form>
+</ion-content>

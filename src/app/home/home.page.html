@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      ข้อมูลส่วนตัว
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor=" let item of dataList">
+  <ion-card-content >
+    <ion-img class="resize" src="\assets\707960.png"></ion-img>
+   รหัส : {{item.his_id}}
+    <br>
+   ชื่อ  : {{item.name}}
+    <br>
+   อายุ : {{item.age}}
+    <br>
+   เพศ : {{item.gender}}
+
+<ion-button (click)="deletedata(item.his_id)" expand="full">Delete</ion-button>
+<ion-button (click)="editdata(item.his_id)" expand="full">Edit </ion-button>
+  </ion-card-content>
+</ion-card>
+<ion-button (click)="adddata()" expand="full">เพิ่ม</ion-button>
+</ion-content>

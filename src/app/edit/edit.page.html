@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngFor = "let item of dataList">
+  <form novalidate #myForm="ngForm" (ngSubmit)="edit(myForm.value)">
+  <ion-input type="text" ngModel name="his_id"[(ngModel)]="item.his_id" placeholder="Enter Input"></ion-input>
+
+<ion-input  type="text" ngModel name="name" [(ngModel)]="item.name"placeholder="Enter Input"></ion-input>
+
+<ion-input type="text" ngModel name="age"[(ngModel)]="item.age" placeholder="Enter Input"></ion-input>
+
+<ion-input type="text" ngModel name="gender"[(ngModel)]="item.gender" placeholder="Enter Input"></ion-input>
+<ion-button type="submit" expand="full">save</ion-button>
+</form>
+</ion-content>
